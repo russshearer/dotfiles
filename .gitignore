@@ -1,0 +1,6 @@
+# Local overrides — not tracked
+.bashrc.local
+
+# OS junk
+.DS_Store
+Thumbs.db

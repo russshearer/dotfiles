@@ -1,0 +1,51 @@
+# ~/.gitconfig — Git defaults
+[user]
+    name = Russ Shearer
+    email = <YOUR_EMAIL>
+
+[init]
+    defaultBranch = main
+
+[core]
+    editor = vim
+    autocrlf = input
+    pager = less -FRX
+
+[pull]
+    rebase = true
+
+[push]
+    default = current
+    autoSetupRemote = true
+
+[fetch]
+    prune = true
+
+[alias]
+    s = status -sb
+    co = checkout
+    br = branch
+    ci = commit
+    cm = commit -m
+    aa = add -A
+    d = diff
+    dc = diff --cached
+    lg = log --oneline --graph --decorate -20
+    lga = log --oneline --graph --decorate --all
+    last = log -1 --stat
+    undo = reset HEAD~1 --mixed
+    amend = commit --amend --no-edit
+    stash-all = stash save --include-untracked
+    branches = branch -a
+    remotes = remote -v
+    tags = tag -l
+    cleanup = "!git branch --merged | grep -v '\\*\\|main\\|master' | xargs -n 1 git branch -d"
+
+[color]
+    ui = auto
+
+[diff]
+    colorMoved = default
+
+[merge]
+    conflictstyle = diff3
