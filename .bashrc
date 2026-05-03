@@ -40,6 +40,9 @@ if command -v oh-my-posh &>/dev/null; then
     eval "$(oh-my-posh init bash --config https://github.com/russshearer/terminal/raw/main/oh-my-posh/themes/myterm.omp.json)"
 else
     # Fallback: basic colored prompt if oh-my-posh isn't installed
+    # Set terminal tab title
+    PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}:${PWD}\007"'
+
     if [ "$(id -u)" -eq 0 ]; then
         PS1='\[\e[1;31m\]\u@\h\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]\$ '
     else
