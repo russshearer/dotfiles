@@ -1,6 +1,10 @@
 # Local overrides — not tracked
 .bashrc.local
 
+# dotfile logs
+.last_update
+.update.log
+
 # OS junk
 .DS_Store
 Thumbs.db
