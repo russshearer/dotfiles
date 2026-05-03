@@ -1,9 +1,12 @@
 # ~/.bash_aliases — Russ's homelab aliases
+# Managed via https://github.com/russshearer/dotfiles
 # Sourced from .bashrc
 
 # ----------------------------------------------------------
 # General
 # ----------------------------------------------------------
+alias cls='clear'
+alias h='history'
 alias ll='ls -alF --color=auto'
 alias la='ls -A --color=auto'
 alias l='ls -CF --color=auto'
@@ -47,6 +50,20 @@ alias kwatch='watch -n2 kubectl get pods -A'
 
 # kubectl autocomplete for aliases
 complete -o default -F __start_kubectl k 2>/dev/null
+
+# ----------------------------------------------------------
+# OpenTofu
+# ----------------------------------------------------------
+alias tfu='tofu'
+alias tfui='tofu init'
+alias tfup='tofu plan'
+alias tfua='tofu apply'
+alias tfuaa='tofu apply -auto-approve'
+alias tfud='tofu destroy'
+alias tfus='tofu state'
+alias tfuo='tofu output'
+alias tfuv='tofu validate'
+alias tfuf='tofu fmt -recursive'
 
 # ----------------------------------------------------------
 # Terraform
