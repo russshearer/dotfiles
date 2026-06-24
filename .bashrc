@@ -99,8 +99,9 @@ fi
 
 # ----------------------------------------------------------
 # Profile reload
-# ---------------------------------------------------------
+# ----------------------------------------------------------
 rlp() {
     source ~/.bashrc
-    echo -e "\e[32mBash profile reloaded!\e[0m"
+    eval "$(oh-my-posh init bash --config "https://raw.githubusercontent.com/russshearer/terminal/main/oh-my-posh/themes/myterm.omp.json?v=$(date +%s)")"
+    echo -e "\e[32mBash profile and Oh My Posh theme reloaded!\e[0m"
 }
