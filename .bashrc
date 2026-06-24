@@ -95,3 +95,12 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 if [ -f "$HOME/.bashrc.local" ]; then
     . "$HOME/.bashrc.local"
 fi
+
+
+# ----------------------------------------------------------
+# Profile reload
+# ---------------------------------------------------------
+rlp() {
+    source ~/.bashrc
+    echo -e "\e[32mBash profile reloaded!\e[0m"
+}
