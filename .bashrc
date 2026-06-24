@@ -102,6 +102,5 @@ fi
 # ----------------------------------------------------------
 rlp() {
     source ~/.bashrc
-    eval "$(oh-my-posh init bash --config https://raw.githubusercontent.com/russshearer/terminal/refs/heads/main/oh-my-posh/myterm.omp.json)"
     echo -e "\e[32mBash profile and Oh My Posh theme reloaded!\e[0m"
 }
