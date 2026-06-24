@@ -37,7 +37,7 @@ __git_branch() {
 }
 
 if command -v oh-my-posh &>/dev/null; then
-    eval "$(oh-my-posh init bash --config https://github.com/russshearer/terminal/raw/main/oh-my-posh/themes/myterm.omp.json)"
+    eval "$(oh-my-posh init bash --config https://raw.githubusercontent.com/russshearer/terminal/refs/heads/main/oh-my-posh/myterm.omp.json)"
 else
     # Fallback: basic colored prompt if oh-my-posh isn't installed
     # Set terminal tab title
@@ -102,6 +102,6 @@ fi
 # ----------------------------------------------------------
 rlp() {
     source ~/.bashrc
-    eval "$(oh-my-posh init bash --config https://github.com/russshearer/terminal/raw/main/oh-my-posh/themes/myterm.omp.json)"
+    eval "$(oh-my-posh init bash --config https://raw.githubusercontent.com/russshearer/terminal/refs/heads/main/oh-my-posh/myterm.omp.json)"
     echo -e "\e[32mBash profile and Oh My Posh theme reloaded!\e[0m"
 }
