@@ -53,11 +53,9 @@ link_file "$DOTFILES_DIR/.tmux.conf" "$HOME/.tmux.conf"
 link_file "$DOTFILES_DIR/.gitconfig" "$HOME/.gitconfig"
 
 # Update system script
+mkdir -p "$HOME/.local/bin"
 link_file "$DOTFILES_DIR/update-system.sh" "$HOME/.local/bin/update-system"
 
-
-# Ensure ~/.local/bin exists
-mkdir -p "$HOME/.local/bin"
 
 echo ""
 echo "Done! Restart your shell or run: source ~/.bashrc"
