@@ -53,7 +53,6 @@ link_file "$DOTFILES_DIR/.tmux.conf" "$HOME/.tmux.conf"
 link_file "$DOTFILES_DIR/.gitconfig" "$HOME/.gitconfig"
 
 # Update system script
-mkdir -p "$HOME/.local/bin"
 link_file "$DOTFILES_DIR/update-system.sh" "$HOME/update-system.sh"
 
 
