@@ -54,7 +54,7 @@ link_file "$DOTFILES_DIR/.gitconfig" "$HOME/.gitconfig"
 
 # Update system script
 mkdir -p "$HOME/.local/bin"
-link_file "$DOTFILES_DIR/update-system.sh" "$HOME/.local/bin/update-system"
+link_file "$DOTFILES_DIR/update-system.sh" "$HOME/update-system.sh"
 
 
 echo ""
