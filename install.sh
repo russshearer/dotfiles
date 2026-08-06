@@ -52,6 +52,10 @@ link_file "$DOTFILES_DIR/.vimrc"     "$HOME/.vimrc"
 link_file "$DOTFILES_DIR/.tmux.conf" "$HOME/.tmux.conf"
 link_file "$DOTFILES_DIR/.gitconfig" "$HOME/.gitconfig"
 
+# Update system script
+link_file "$DOTFILES_DIR/update-system.sh" "$HOME/.local/bin/update-system"
+
+
 # Ensure ~/.local/bin exists
 mkdir -p "$HOME/.local/bin"
 
