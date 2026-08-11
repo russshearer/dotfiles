@@ -96,6 +96,12 @@ if [ -f "$HOME/.bashrc.local" ]; then
     . "$HOME/.bashrc.local"
 fi
 
+# ----------------------------------------------------------
+# Display Fastfetch system summary on interactive shell startup
+# ----------------------------------------------------------
+if [[ $- == *i* ]] && command -v fastfetch >/dev/null 2>&1; then
+    fastfetch
+fi
 
 # ----------------------------------------------------------
 # Profile reload
