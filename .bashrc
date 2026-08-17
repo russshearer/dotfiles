@@ -27,7 +27,18 @@ shopt -s globstar       # ** matches recursively
 # ----------------------------------------------------------
 # PATH
 # ----------------------------------------------------------
-export PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+# Path Prepend eliminates duplicates on reload making it idempotent
+pathprepend() {
+    case ":$PATH:" in
+        *":$1:"*) ;;
+        *) PATH="$1:$PATH" ;;
+    esac
+}
+
+pathprepend "$HOME/.local/bin"
+pathprepend "$HOME/bin"
+
+export PATH
 
 # ----------------------------------------------------------
 # Prompt — Oh My Posh (with fallback)
