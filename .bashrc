@@ -108,12 +108,11 @@ if [ -f "$HOME/.bashrc.local" ]; then
 fi
 
 # ----------------------------------------------------------
-# Display Fastfetch system summary on interactive shell startup
+# Display Fastfetch system summary on ssh login
 # ----------------------------------------------------------
-if [[ $- == *i* ]] && command -v fastfetch >/dev/null 2>&1; then
+if [[ -n "$SSH_CONNECTION" ]] && command -v fastfetch >/dev/null 2>&1; then
     fastfetch
 fi
-
 # ----------------------------------------------------------
 # Profile reload
 # ----------------------------------------------------------
